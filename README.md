@@ -30,6 +30,8 @@ best practices for the aforementioned components.
     * https://ariadnegraphql.org/docs/explorers
 * GraphQL schema is loaded from a dir instead of file which allows for modularization (although it's not really used here)
     * https://ariadnegraphql.org/docs/modularization
+* GraphQL schema documented via descriptions (even using Markdown)
+    * https://ariadnegraphql.org/docs/documenting-schema
 
 
 ## Back-end database

@@ -2,8 +2,14 @@ schema {
     query: Query
 }
 
+"""
+Result must always contain a flag indicating success or failure and list of error messages (if any).
+"""
 interface Result {
+    "Flag indicating **success** (True) or **failure** (False)."
     success: Boolean!
+
+    "List of error strings if error happened."
     errors: [String]
 }
 
@@ -51,7 +57,12 @@ type FilmResult implements Result {
 }
 
 type Query {
+    "List all available films."
     listFilms: FilmsResult!
+
+    "Get a particular film via its id."
     getFilm(film_id: ID!): FilmResult!
+
+    "Search for films via title."
     searchFilms(title: String!): FilmsResult!
 }
