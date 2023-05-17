@@ -1,0 +1,52 @@
+schema {
+    query: Query
+}
+
+type Film {
+    film_id: ID!
+    title: String
+    description: String
+    release_year: String
+    language_id: Int
+    original_language_id: Int
+    rental_duration: Int
+    rental_rate: Int
+    lenght: Int
+    replacement_cost: Int
+    rating: String
+    special_features: String
+    last_update: String
+
+    actors: [Actor]
+    categories: [Category]
+}
+
+type Actor {
+    actor_id: ID!
+    first_name: String!
+    last_name: String!
+}
+
+type Category {
+    category_id: ID!
+    name: String!
+    last_update: String!
+}
+
+type FilmsResult {
+    success: Boolean!
+    errors: [String]
+    data: [Film]
+}
+
+type FilmResult {
+    success: Boolean!
+    errors: [String]
+    data: Film
+}
+
+type Query {
+    listFilms: FilmsResult!
+    getFilm(film_id: ID!): FilmResult!
+    searchFilms(title: String!): FilmsResult!
+}
