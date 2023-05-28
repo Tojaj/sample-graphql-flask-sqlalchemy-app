@@ -57,17 +57,13 @@ and then access:
 
 # TODO
 
-* Document GraphQL schema
- * https://ariadnegraphql.org/docs/documenting-schema
 * Flask application in packages (blueprints)
  * https://flask.palletsprojects.com/en/2.3.x/patterns/packages/
 * Package management via pyproject.toml
  * https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/
-* SQLITE path via config option
 * Anotations
  * https://peps.python.org/pep-0484/
  * https://docs.sqlalchemy.org/en/20/orm/declarative_tables.html
-* New approach for virtual envs
 * Add tox.ini
 * Add Yamlint
 * Use mapped_column and annotations for the fields
@@ -140,11 +136,11 @@ and then access:
 
 # Dev setup
 
-**Create a virtual env**
+**Create a virtual environment by Virtualenv**
 
     $ mkvirtualenv graphql-sample
 
-**Use the virtual env**
+**Use the virtual environment**
 
     $ workon graphql-sample
 
